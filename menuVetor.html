@@ -3,12 +3,23 @@
     var numero = 0
     var opcao = 0
     var resultado = 0
+    alert('Bem vindo ao sistema de calculadora com vetor')
+    while(true){
+        numero = Number(prompt("Informe um numero: [0 p sair]"))
+            if (numero == 0){
+                break
+            } else {
+                vNumeros.push(numero)
+            }
+    }
     while(true){
         opcao = Number(prompt("Informe uma opção:"
             + "\n 0-Sair"
             + "\n 1-Informar números"
             + "\n 2-Somar"
-            + "\n 3-"
+            + "\n 4-Multiplicar"
+            + "\n 9-Boas vindas"
+            
 
         ))
         if(opcao == 0){
@@ -29,6 +40,15 @@
                 resultado = resultado + vNumeros[pos]
             }
             alert(`A soma dos numeros [${vNumeros}] é ${resultado}`)
+        } else if(opcao == 4){
+            resultado = 1;
+            for(var pos = 0; pos < vNumeros.length; pos++){
+                resultado = resultado * vNumeros[pos]
+            }
+        } else if(opcao == 9){
+            alert('Boas vindas à nossa calculadora')
+        } else {
+            alert('Opção inválida')
         }
     }
 </script>
