@@ -1,0 +1,34 @@
+<script>
+    var vNumeros = []
+    var numero = 0
+    var opcao = 0
+    var resultado = 0
+    while(true){
+        opcao = Number(prompt("Informe uma opção:"
+            + "\n 0-Sair"
+            + "\n 1-Informar números"
+            + "\n 2-Somar"
+            + "\n 3-"
+
+        ))
+        if(opcao == 0){
+            break
+        } else if(opcao == 1){
+            while(true){
+                numero = Number(prompt("Informe um número"))
+                if(numero == 0){
+                    break
+                } else{
+                    vNumeros.push(numero)
+                }
+            }
+        } else if(opcao == 2){
+            alert(vNumeros)
+        } else if(opcao == 3) {
+            for (var pos = 0; pos <vNumeros.length; pos++){
+                resultado = resultado + vNumeros[pos]
+            }
+            alert(`A soma dos numeros [${vNumeros}] é ${resultado}`)
+        }
+    }
+</script>

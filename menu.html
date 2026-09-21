@@ -1,0 +1,38 @@
+<script>
+    var x = 0
+    var y = 0
+    var resultado = 0
+    var opcao = 0
+    while (true) {
+        opcao = Number(prompt("Informe uma opção:"
+            + "\n 0-sair"
+            + "\n 1-Receber dois números"
+            + "\n 2-Somar"
+            + "\n 3-Multiplicar"
+            + "\n 4-Dividir"
+            + "\n 5-Exponencial"
+            + "\n 9-Mensagem de boas vindas"
+        )
+        )
+        if (opcao == 0) {
+            break
+        } else if (opcao == 1) {
+            x = Number(prompt("Informe um número:"))
+            y = Number(prompt("Informe outro número:"))
+        } else if (opcao == 2) {
+            resultado = x + y;
+            alert(`A soma de ${x} e ${y} é ${resultado}`)
+        } else if (opcao == 3) {
+            resultado = x * y
+            alert(`A multiplicação de ${x} e ${y} é ${resultado}`)
+        } else if (opcao == 4) {
+            resultado = x / y
+            alert(`A Divisão de ${x} e ${y} é ${resultado}`)
+        } else if (opcao == 5) {
+            resultado = x ** y
+            alert(`A exponencial de ${x} e ${y} é ${resultado}`)
+        } else if (opcao == 9) {
+            alert("Bem vindo(a) à nossa calculadora.")
+        }
+    }
+</script>
